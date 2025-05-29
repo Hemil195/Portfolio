@@ -1,0 +1,136 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 2%;
+}
+
+.nav-left .name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4285f4;
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-right: 15%;
+}
+
+.nav-link {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #7c4dff;
+}
+
+.hire-me-btn {
+  background: #7c4dff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: background 0.2s;
+}
+
+.hire-me-btn:hover {
+  background: #5e35b1;
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 200;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation when open */
+.bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-right {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-right.active {
+    display: flex;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+  }
+
+  .nav-left {
+    margin-left: 0;
+  }
+
+  .nav-right {
+    margin-right: 0;
+  }
+}
