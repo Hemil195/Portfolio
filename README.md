@@ -2,11 +2,15 @@
 
 This is a full-stack portfolio website project built with React.js for the frontend and Node.js/Express.js for the backend.
 
+## Live Demo
+- Frontend: [https://hemil-patel.vercel.app/](https://hemil-patel.vercel.app/)
+- Backend: Deployed on Render
+
 ## Project Structure
 
 The project is divided into two main parts:
-- `client/` - Frontend React application
-- `server/` - Backend Node.js/Express.js server
+- `client/` - Frontend React application (Deployed on Vercel)
+- `server/` - Backend Node.js/Express.js server (Deployed on Render)
 
 ## Frontend (Client)
 
@@ -58,7 +62,11 @@ cd server
 npm install
 ```
 
-3. Create a `.env` file in the server directory with necessary environment variables
+3. Create a `.env` file in the server directory with necessary environment variables:
+```
+PORT=6002
+MONGODB_URI=your_mongodb_connection_string
+```
 
 4. Start the server:
 ```bash
@@ -66,6 +74,18 @@ node app.js
 ```
 
 The backend server will run on `http://localhost:6002`
+
+## Deployment
+
+### Frontend Deployment (Vercel)
+- The frontend is deployed on Vercel
+- Automatic deployments on push to main branch
+- Environment variables configured in Vercel dashboard
+
+### Backend Deployment (Render)
+- The backend is deployed on Render
+- Automatic deployments on push to main branch
+- Environment variables configured in Render dashboard
 
 ## Technologies Used
 
@@ -95,6 +115,7 @@ The backend server will run on `http://localhost:6002`
 - Particle effects
 - Type animations
 - Scroll animations
+- Fully deployed and production-ready
 
 ## Contributing
 1. Fork the repository
