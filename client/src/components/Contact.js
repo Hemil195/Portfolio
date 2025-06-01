@@ -75,9 +75,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-container section" data-aos="fade-up">
-      <h2 className="contact-title" data-aos="fade-right">Contact Us</h2>
-      <form className="contact-form" onSubmit={sentUserdata} data-aos="fade-left">
+    <div className="contact-container section fade-slide-up">
+      <h2 className="contact-title">Contact Us</h2>
+      <form className="contact-form" onSubmit={sentUserdata}>
         <div className="form-group">
           <label htmlFor="fname">First Name</label>
           <input type="text" name="fname" id="fname" value={inputvalue.fname} onChange={getvalue} disabled={isLoading} />

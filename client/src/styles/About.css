@@ -17,7 +17,6 @@
 .about-text {
   flex: 1;
   padding-right: 40px;
-  animation: fadeInLeft 0.8s ease;
 }
 
 /* New name header styles */
@@ -44,7 +43,6 @@
 .title-text {
   display: block;
   font-size: 1.5rem;
-  
   margin-top: 10px;
   font-weight: 600;
 }
@@ -66,7 +64,6 @@
   margin-bottom: 30px;
   max-width: 600px;
 }
-
 
 /* Details Section - Education and Journey side by side */
 .details-section {
@@ -159,18 +156,6 @@
   border-radius: 15px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
   border: 8px solid white;
-}
-
-/* Animation Keyframe (text only) */
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 /* Responsive Design */

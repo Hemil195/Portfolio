@@ -4,11 +4,11 @@ import projectData from '../assets/data';
 
 const Projects = () => {
   return (
-    <div className="projects-section section" data-aos="fade-up">
-      <h2 className="projects-heading" data-aos="fade-right">Projects</h2>
-      <div className="projects-grid" data-aos="fade-left">
+    <div className="projects-section section fade-slide-up">
+      <h2 className="projects-heading">Projects</h2>
+      <div className="projects-grid stagger-children">
         {projectData.map((project, index) => (
-          <div key={index} className="project-card" data-aos="zoom-in" data-aos-delay={index * 100}>
+          <div key={index} className="project-card">
             <div className="project-header">
               <h3>{project.projectName}</h3>
               <p className="project-description">{project.description}</p>

@@ -1,24 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ReactTyped } from 'react-typed';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import '../styles/Home.css';
 import devImage from '../assets/3411109.jpg';
 
-
 const Home = () => {
-  useEffect(() => {
-    AOS.init({ 
-      duration: 1000,
-      once: true,
-      offset: 100
-    });
-  }, []);
-
   return (
-    <div className="home-container">
-      <div className="text-section" data-aos="fade-right">
+    <div className="home-container fade-slide-up">
+      <div className="text-section">
         <h2>👋 Hi, I'm <span className="name-highlight">Hemil Patel</span></h2>
         <div className="typing-container">
           <ReactTyped
@@ -33,12 +22,12 @@ const Home = () => {
             className="typed-text"
           />
         </div>
-        <p data-aos="fade-up" data-aos-delay="200">
+        <p>
           I'm a passionate developer who loves building responsive web applications and exploring new technologies.
           From crafting full-stack MERN projects to solving real-world problems with code, I strive to create impactful digital experiences.
           Let's connect and build something amazing together!
         </p>
-        <div className="button-group" data-aos="fade-up" data-aos-delay="400">
+        <div className="button-group stagger-children">
           <Link to="/about">
             <button className="button">About</button>
           </Link>
@@ -57,7 +46,7 @@ const Home = () => {
           </a>
         </div>
       </div>
-      <div className="image-section" data-aos="fade-left">
+      <div className="image-section">
         <img src={devImage} alt="Developer working" />
       </div>
     </div>
