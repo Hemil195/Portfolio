@@ -38,7 +38,7 @@ const Contact = () => {
     } else {
       setIsLoading(true);
       try {
-        const res = await fetch('http://localhost:6002/register', {
+        const res = await fetch('https://hemil-patel.onrender.com/register', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
