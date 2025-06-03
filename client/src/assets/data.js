@@ -37,8 +37,25 @@ const projectData = [
     technologies: ["Python", "Gradio", "Pandas", "ReportLab", "CSV"],
     demo: "https://example.com/event-management",
     code: "https://github.com/Hemil195/Event-Management-System"
+  },
+  {
+    projectName: "WeatherPro Dashboard",
+    description: "A modern, responsive web app providing real-time weather updates, forecasts, and air quality data for multiple cities.",
+    features: [
+      "Current weather: temperature, wind speed, humidity, pressure, visibility",
+      "5-day weather forecast",
+      "Location search and recent searches with Geolocation support",
+      "Favorites list with local storage support",
+      "Air Quality Index (AQI) with pollutants: CO, NO₂, PM2.5, O₃",
+      "Dark mode toggle for better accessibility"
+    ],
+    technologies: [
+      "React", "TypeScript", "Vite", "Tailwind CSS", "Lucide React",
+      "React Hot Toast", "OpenWeatherMap API", "Local Storage"
+    ],
+    demo: "https://weatherpro-delta.vercel.app/",
+    code: "https://github.com/Hemil195/Whether-Dashboard"
   }
-  
 ];
 
 export default projectData;
