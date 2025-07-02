@@ -2,20 +2,21 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/userSchema");
 const nodemailer = require("nodemailer");
+require("dotenv").config(); // Load env variables
 
 // email config
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 587,
-    secure: false, // true for 465, false for other ports
+    secure: false,
     auth: {
-        user: "hemilpatel0195@gmail.com",
-        pass: "bqboqatlpmalngps"
+        user: process.env.EMAIL,
+        pass: process.env.PASS
     },
     tls: {
         rejectUnauthorized: false
     },
-    connectionTimeout: 10000, // 10 seconds
+    connectionTimeout: 10000,
     greetingTimeout: 10000,
     socketTimeout: 10000
 });
@@ -39,8 +40,8 @@ router.post("/register", async (req, res) => {
         await newUser.save();
 
         const mailOptions = {
-            from: "hemilpatel0195@gmail.com",
-            to: "hemilpatel0195@gmail.com",
+            from: process.env.EMAIL,
+            to: process.env.EMAIL,
             subject: "New Contact Message from Portfolio",
             text: `
 New Message from Contact Page:
@@ -62,7 +63,6 @@ Message: ${message || 'No message'}
             });
         } catch (emailError) {
             console.error("Error sending email:", emailError);
-            // Still return success for database storage but indicate email failed
             res.status(201).json({ 
                 status: 201, 
                 message: "Message stored successfully but email failed to send",
